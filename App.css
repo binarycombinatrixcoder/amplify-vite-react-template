@@ -1,0 +1,225 @@
+body {
+  margin:0;
+  background: linear-gradient(180deg, rgb(60, 157, 255), rgb(255, 255, 255)) !important;
+  background-attachment: fixed !important;
+  background-size: cover;
+}
+#root {
+  width: 90vw;
+  margin-top: 80vh !important;
+  padding: 2rem;
+  text-align: left; /* Align text to the left */
+  background-color: white; /* Set background to white */
+  font-size: 2rem; /* Increase default font size */ /* Adjust as needed */
+  border-radius: 5vh;
+}
+.navbar {
+  width: 100%;
+  background-color: #f0f0f0; /* Example background color */
+  /* padding: 1rem; */
+  /* margin-top: 6vh; */
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  position: fixed; 
+  top: 0; /* Position at the top of the viewport */
+  left: 0;
+  /* z-index: 10; */
+}
+
+.navbar-list {
+  list-style: none;
+  margin-right: 10vw;
+  
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-item {
+  margin-left: 1rem; /* Add space between links */
+}
+
+.navbar-link {
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Example link color */
+}
+main {
+  width: 100%; /* Ensure main content takes full width */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ul {
+  list-style: none; /* Remove default list markers */
+  padding: 0; /* Remove default list padding */
+  margin: 0;
+  background-color: white !important;
+  border: none !important;
+}
+
+li {
+  border: 1px solid #ccc; /*Add thin border to list items*/
+  padding: 1rem 1rem; /* Add padding inside list items */
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  /* justify-items: space-between; */
+}
+
+li input[type="checkbox"] {
+  width: 2em;
+  height: 2em;
+  margin-right: 1.5rem; /* Add spacing between checkbox and text */
+}
+
+button {
+  margin: 0.5rem; /* Add spacing between buttons */
+  padding: 0.5rem 1rem;
+  /* font-size: 1rem; */
+}
+
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs vertically */
+  margin-bottom: 0.5rem; /* Add spacing between form elements */
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* font-size: 1rem; */
+  width: 100%; /* Ensure form elements take full width */
+}
+
+input[type="text"] {
+  all: unset; /* Resets all inherited styles */
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  font: inherit; /* Inherit font from parent */
+  color: inherit;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  justify-content: space-between; /* Added to align to the right end */
+}
+
+.search-bar {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border-radius: 25px;
+  z-index: 99999;
+  margin-right: 0.5rem; /* Add margin to separate icon from input */
+}
+
+.search-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: transparent;
+}
+
+.patient-list-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  border: 1px solid #ccc;
+  padding: 2rem 1rem;
+  margin-bottom: 0.5rem;
+  position: relative; /* Added for absolute positioning of consent text */
+}
+
+.patient-info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.patient-name {
+  flex-shrink: 0;
+}
+
+.patient-phone {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.patient-consent {
+  position: absolute; /* Positioned relative to its parent */
+  top: 0; /* Adjust vertical position as needed */
+  right: 0; /* Adjust horizontal position as needed */
+  font-size: 1.5rem; /* Smaller font size */
+  font-style: italic;
+  background-color: rgb(49, 232, 49);
+}
+
+.no-patient-consent {
+  position: absolute; /* Positioned relative to its parent */
+  top: 0; /* Adjust vertical position as needed */
+  right: 0; /* Adjust horizontal position as needed */
+  font-size: 1.5rem; /* Smaller font size */
+  font-style: italic;
+  background-color: red;
+}
+
+h2 {
+  margin-top: 0 !important;
+}
